@@ -28,6 +28,7 @@ func _process(_delta: float) -> void:
 		can_laser = false
 		$Timer.start()
 		laser.emit(selected_laser.global_position, player_direction)
+		$GPUParticles2D.emitting = true
 		
 		
 		
