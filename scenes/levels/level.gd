@@ -4,9 +4,10 @@ var test_array: Array[String] = ["a", "b", "c"]
 
 var laser_scene: PackedScene = preload("res://scenes/projectiles/laser.tscn")
 var grenade_scene: PackedScene = preload("res://scenes/projectiles/grenade.tscn")
-func _on_gate_player_entered_gate(body) -> void:
-	print("player has entered gate")
-	print(body)
+
+func _on_gate_player_entered_gate(_body) -> void:
+	var tween = create_tween()
+	tween.tween_property($Player, "speed", 0, 0.5)
 
 func _on_player_laser(pos, direction) -> void:
 	var laser = laser_scene.instantiate() as Area2D
@@ -22,3 +23,14 @@ func _on_player_grenade(pos, direction) -> void:
 	grenade.linear_velocity = direction * grenade.speed
 	$Projectiles.add_child(grenade)
 	
+
+
+func _on_house_player_entered() -> void:
+	var tween = get_tree().create_tween()
+	tween.tween_property($Player/Camera2D, "zoom", Vector2(1, 1), 1).set_trans(Tween.TRANS_CUBIC)
+	
+
+
+func _on_house_player_exited() -> void:
+	var tween = get_tree().create_tween()
+	tween.tween_property($Player/Camera2D, "zoom", Vector2(0.6, 0.6), 2)

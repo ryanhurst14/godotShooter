@@ -2,9 +2,11 @@ extends CharacterBody2D
 
 var can_laser = true
 var can_grenade = true
-const speed = 2000
 signal laser(pos, direction)
 signal grenade(pos, direction)
+
+@export var max_speed: int = 2500
+var speed: int = max_speed
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

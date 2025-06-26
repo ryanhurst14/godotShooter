@@ -1,3 +1,6 @@
 extends RigidBody2D
 
-@export var speed: int = 1000
+const speed = 750
+
+func explode():
+	$AnimationPlayer.play("Explosion")
