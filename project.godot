@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Shooter"
-run/main_scene="uid://debqc0bmsigjq"
+run/main_scene="uid://iyhbqovkwfaq"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
 

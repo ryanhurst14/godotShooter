@@ -5,6 +5,7 @@ var can_grenade = true
 signal laser(pos, direction)
 signal grenade(pos, direction)
 
+
 @export var max_speed: int = 2500
 var speed: int = max_speed
 
@@ -31,6 +32,7 @@ func _process(_delta: float) -> void:
 		$Timer.start()
 		laser.emit(selected_laser.global_position, player_direction)
 		$GPUParticles2D.emitting = true
+		
 		
 		
 		

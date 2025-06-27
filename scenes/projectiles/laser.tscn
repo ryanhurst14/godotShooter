@@ -26,3 +26,11 @@ color = Color(0.219608, 1, 1, 1)
 energy = 2.73
 shadow_enabled = true
 texture = ExtResource("3_cwxws")
+
+[node name="SelfDestructTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]
+[connection signal="timeout" from="SelfDestructTimer" to="." method="_on_self_destruct_timer_timeout"]
