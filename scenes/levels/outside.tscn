@@ -110,17 +110,18 @@ scale = Vector2(0.865494, 0.807116)
 position = Vector2(2378.38, 1899.95)
 autoplay = "default"
 
+[node name="Crate" parent="Ground" index="11" instance=ExtResource("15_x30qc")]
+position = Vector2(1392.58, 1976.63)
+rotation = 2.75238
+scale = Vector2(0.999998, 1)
+
+[node name="Toilet" parent="Ground" index="12" instance=ExtResource("16_uaeil")]
+position = Vector2(2286.63, 808.73)
+rotation = -0.33714
+scale = Vector2(0.858482, 0.814569)
+skew = -0.0460033
+
 [node name="Gate" parent="." index="1" instance=ExtResource("2_x73sx")]
 position = Vector2(639, -914)
-
-[node name="Crate" parent="." index="5" instance=ExtResource("15_x30qc")]
-position = Vector2(1609, 2449)
-rotation = 2.72725
-scale = Vector2(1.16781, 1.2273)
-skew = 0.0490345
-
-[node name="Toilet" parent="." index="6" instance=ExtResource("16_uaeil")]
-position = Vector2(2642, 1002)
-rotation = -0.359538
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
