@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2ssy7wlbyx4x"]
+[gd_scene load_steps=14 format=3 uid="uid://b2ssy7wlbyx4x"]
 
 [ext_resource type="PackedScene" uid="uid://debqc0bmsigjq" path="res://scenes/levels/level.tscn" id="1_8ht0b"]
 [ext_resource type="TileSet" uid="uid://0nnemq6s1cer" path="res://scenes/levels/house.tres" id="2_b1uqu"]
@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://8rs5h7i0dx32" path="res://graphics/lights/textures/circle.png" id="6_0kuad"]
 [ext_resource type="Texture2D" uid="uid://dieb5ugym7idp" path="res://graphics/lights/overlays/hole.png" id="6_x0st6"]
 [ext_resource type="Texture2D" uid="uid://cvj6sbe4i8th1" path="res://graphics/lights/overlays/lattice.png" id="7_0kuad"]
+[ext_resource type="PackedScene" uid="uid://3r5s5p0tuxs2" path="res://scenes/items/item.tscn" id="12_7r4nv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7r4nv"]
 size = Vector2(262, 769)
@@ -140,6 +141,7 @@ texture_scale = 2.35
 
 [node name="Lights" parent="." index="3"]
 metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
 
 [node name="LightFanAnimation" parent="Lights" index="0" instance=ExtResource("4_j5d1l")]
 position = Vector2(3278, 301)
@@ -277,5 +279,8 @@ position = Vector2(5263, 114)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ExitGateArea" index="0"]
 position = Vector2(19, 277.5)
 shape = SubResource("RectangleShape2D_7r4nv")
+
+[node name="Item" parent="." index="7" instance=ExtResource("12_7r4nv")]
+position = Vector2(2932, 308)
 
 [connection signal="body_entered" from="ExitGateArea" to="." method="_on_exit_gate_area_body_entered"]
