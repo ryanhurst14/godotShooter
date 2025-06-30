@@ -117,17 +117,12 @@ position = Vector2(2378.38, 1899.95)
 autoplay = "default"
 
 [node name="Crate" parent="Ground" index="11" instance=ExtResource("15_x30qc")]
-position = Vector2(1602.89, 1875.74)
-rotation = 5.88472
-scale = Vector2(0.999998, 1)
+position = Vector2(1744.83, 1822.47)
+rotation = -0.403171
 
 [node name="Toilet" parent="Ground" index="12" instance=ExtResource("16_uaeil")]
-light_mask = 1
-visibility_layer = 1
-position = Vector2(2296.15, 805.501)
-rotation = -0.33714
-scale = Vector2(0.858482, 0.814569)
-skew = -0.0460033
+position = Vector2(2317.79, 819.222)
+rotation = -0.382227
 
 [node name="Infestation" parent="." index="3"]
 position = Vector2(-646, 153)
