@@ -9,7 +9,7 @@
 size = Vector2(4053, 2096)
 
 [node name="House" type="Area2D"]
-collision_layer = 16
+collision_layer = 4
 script = ExtResource("1_wmlim")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

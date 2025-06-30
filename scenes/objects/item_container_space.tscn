@@ -2,9 +2,16 @@
 
 [ext_resource type="Script" uid="uid://blc0y4swxbadi" path="res://scenes/objects/item_container_space.gd" id="1_ml14m"]
 
-[node name="ItemContainerSpace" type="StaticBody2D"]
+[node name="ItemContainerSpace" type="StaticBody2D" groups=["Container"]]
+light_mask = 0
+visibility_layer = 0
+collision_layer = 4
 script = ExtResource("1_ml14m")
+
+[node name="BaseSprite" type="Sprite2D" parent="."]
+
+[node name="LidSprite" type="Sprite2D" parent="."]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="SpawnPositions" type="Node2D" parent="."]

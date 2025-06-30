@@ -56,6 +56,9 @@ sources/1 = SubResource("TileSetAtlasSource_ddemh")
 [node name="Outside" instance=ExtResource("1_2s4ok")]
 script = ExtResource("2_xqqjy")
 
+[node name="Gate" parent="." index="1" instance=ExtResource("2_x73sx")]
+position = Vector2(639, -914)
+
 [node name="Soil" type="Sprite2D" parent="Ground" index="0"]
 texture_repeat = 2
 position = Vector2(607.576, 942.713)
@@ -101,7 +104,7 @@ texture = ExtResource("10_cnio0")
 
 [node name="House" parent="Ground" index="8" instance=ExtResource("11_6u4a0")]
 position = Vector2(1635.78, 1975.82)
-rotation = 2.75238
+rotation = 2.75669
 
 [node name="SteamVent" parent="Ground" index="9" instance=ExtResource("12_oe17f")]
 position = Vector2(-211.18, 444.721)
@@ -112,20 +115,24 @@ position = Vector2(2378.38, 1899.95)
 autoplay = "default"
 
 [node name="Crate" parent="Ground" index="11" instance=ExtResource("15_x30qc")]
-position = Vector2(1392.58, 1976.63)
-rotation = 2.75238
+position = Vector2(1602.89, 1875.74)
+rotation = 5.88472
 scale = Vector2(0.999998, 1)
 
 [node name="Toilet" parent="Ground" index="12" instance=ExtResource("16_uaeil")]
-position = Vector2(2286.63, 808.73)
+light_mask = 1
+visibility_layer = 1
+position = Vector2(2296.15, 805.501)
 rotation = -0.33714
 scale = Vector2(0.858482, 0.814569)
 skew = -0.0460033
 
-[node name="Gate" parent="." index="1" instance=ExtResource("2_x73sx")]
-position = Vector2(639, -914)
+[node name="Player" parent="." index="5"]
+position = Vector2(-323, 1343)
 
 [node name="Item" parent="." index="6" instance=ExtResource("18_bjulg")]
 position = Vector2(120, 264)
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
+[connection signal="player_entered" from="Ground/House" to="." method="_on_house_player_entered"]
+[connection signal="player_exited" from="Ground/House" to="." method="_on_house_player_exited"]
