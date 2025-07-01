@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://iyhbqovkwfaq"]
+[gd_scene load_steps=25 format=3 uid="uid://iyhbqovkwfaq"]
 
 [ext_resource type="PackedScene" uid="uid://debqc0bmsigjq" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Texture2D" uid="uid://cn2ghm4lvr2u" path="res://graphics/ground/stones.png" id="2_qvsb0"]
@@ -19,6 +19,8 @@
 [ext_resource type="PackedScene" uid="uid://cnpuryf6d2ynp" path="res://scenes/objects/toilet.tscn" id="16_uaeil"]
 [ext_resource type="PackedScene" uid="uid://3r5s5p0tuxs2" path="res://scenes/items/item.tscn" id="18_bjulg"]
 [ext_resource type="PackedScene" uid="uid://qki71crbu3g3" path="res://scenes/enemies/scout.tscn" id="19_gd7nx"]
+[ext_resource type="PackedScene" uid="uid://bxivdpnqr54gc" path="res://scenes/enemies/bug.tscn" id="20_4lnny"]
+[ext_resource type="PackedScene" uid="uid://66xmestb6vsl" path="res://scenes/enemies/drone.tscn" id="21_cnio0"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbwx5"]
 resource_name = "walls"
@@ -105,7 +107,7 @@ position = Vector2(3567.56, 468.128)
 texture = ExtResource("10_cnio0")
 
 [node name="House" parent="Ground" index="8" instance=ExtResource("11_6u4a0")]
-position = Vector2(1635.78, 1975.82)
+position = Vector2(1661.75, 1973.4)
 rotation = 2.75669
 
 [node name="SteamVent" parent="Ground" index="9" instance=ExtResource("12_oe17f")]
@@ -141,6 +143,12 @@ position = Vector2(1595, 2953)
 rotation = 3.14159
 collision_layer = 2
 collision_mask = 11
+
+[node name="Bug" parent="Enemies" index="1" instance=ExtResource("20_4lnny")]
+position = Vector2(2497, 430)
+
+[node name="Drone" parent="Enemies" index="2" instance=ExtResource("21_cnio0")]
+position = Vector2(-371, 560)
 
 [node name="Player" parent="." index="8"]
 z_index = 2
