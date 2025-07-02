@@ -13,6 +13,7 @@ func hit():
 		vulnerable = false
 		$Timers/HitTimer.start()
 		$Sprite2D.material.set_shader_parameter("progress", 1)
+		$AudioStreamPlayer2D.play()
 		if health <= 0:
 			queue_free()
 		$Timers/HitTimer.start()

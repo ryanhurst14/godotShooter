@@ -35,7 +35,9 @@ func hit():
 		health -= 10
 		vulnerable = false 
 		$HitTimer.start()
+		$Node/HitSound.play()
 	if health <= 0:
+		
 		explosion_active = true
 		speed_mult = 0
 		

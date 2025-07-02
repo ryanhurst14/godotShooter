@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://iyhbqovkwfaq"]
+[gd_scene load_steps=30 format=3 uid="uid://iyhbqovkwfaq"]
 
 [ext_resource type="PackedScene" uid="uid://debqc0bmsigjq" path="res://scenes/levels/level.tscn" id="1_2s4ok"]
 [ext_resource type="Texture2D" uid="uid://cn2ghm4lvr2u" path="res://graphics/ground/stones.png" id="2_qvsb0"]
@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://qki71crbu3g3" path="res://scenes/enemies/scout.tscn" id="19_gd7nx"]
 [ext_resource type="PackedScene" uid="uid://bxivdpnqr54gc" path="res://scenes/enemies/bug.tscn" id="20_4lnny"]
 [ext_resource type="PackedScene" uid="uid://66xmestb6vsl" path="res://scenes/enemies/drone.tscn" id="21_cnio0"]
+[ext_resource type="PackedScene" uid="uid://dcvyfc3lqvpvg" path="res://scenes/enemies/car.tscn" id="22_6u4a0"]
+[ext_resource type="PackedScene" uid="uid://bwl28u7ya5hku" path="res://scenes/enemies/hunter.tscn" id="22_oe17f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lbwx5"]
 resource_name = "walls"
@@ -56,6 +58,20 @@ tile_size = Vector2i(390, 390)
 sources/0 = SubResource("TileSetAtlasSource_lbwx5")
 sources/1 = SubResource("TileSetAtlasSource_ddemh")
 
+[sub_resource type="Curve2D" id="Curve2D_cnio0"]
+_data = {
+"points": PackedVector2Array(-1073.06, -138.998, 1073.06, 138.998, 2899, 1475, 200.157, -650.511, -200.157, 650.511, 3992, 4547, 0, 0, 0, 0, 2013, 5648, 555.992, -333.595, -555.992, 333.595, 43, 6248, 611.591, 27.7996, -611.591, -27.7996, -1533, 6857, 122.318, 255.756, -122.318, -255.756, -2438, 5702, -22.2397, -11.1198, 22.2397, 11.1198, -2876, 4215, -222.397, 283.556, 222.397, -283.556, -2850, 3615, 72.279, -33.3595, -72.279, 33.3595, -2142, 3221, 0, 0, 0, 0, 2899, 1475)
+}
+point_count = 10
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lbwx5"]
+size = Vector2(13103, 531.5)
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_ddemh"]
+vertices = PackedVector2Array(-3100.81, 846.313, -3155.36, -163.602, -1295.65, 68.1172, -983.148, 3562.46, -1226.24, -367.258, -3183.43, -324.227, -3178.99, -408.008, -1738.62, -1810, -1166.51, -917.172, -1017.76, -1723.34, 1761.62, 3439.52, -315.383, 4371.52, -570.281, 3692.43, 2223.42, 2496.26, 2492.48, 3190.36, 2168.51, 3364.28, 1816.98, 3586.8, 2169.56, 3377.32, -3256.43, -1815.95, -716.773, -146.047, 1204.95, 2565.86, 2345.51, 3437.99, 2638.96, 4136.78, -1023.36, 5736.63, 1630.08, 3924.86, 4131.18, -107.07, 4156.87, 1219.79, 2757.89, 1897.87, -2051.33, 4026.16, -3529.81, 4154.25, -3656.03, 3469.92, -3715.89, 1604.41, -1706.6, 3889.71, -1644.52, 4092.79, -399.188, 4577.78, 1127.9, 4138.06, 627.969, 4124.06)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3), PackedInt32Array(4, 5, 6, 7, 8), PackedInt32Array(7, 9, 8), PackedInt32Array(10, 11, 12, 13), PackedInt32Array(10, 13, 14, 15), PackedInt32Array(16, 10, 15, 17), PackedInt32Array(6, 18, 7), PackedInt32Array(4, 8, 19), PackedInt32Array(3, 2, 4, 19, 20), PackedInt32Array(21, 22, 23, 24), PackedInt32Array(19, 25, 26, 27, 20), PackedInt32Array(28, 29, 30, 31, 0, 3, 32), PackedInt32Array(33, 32, 3, 34, 23), PackedInt32Array(16, 17, 21, 24), PackedInt32Array(35, 24, 23), PackedInt32Array(35, 23, 34, 36)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(-3189, -408, -3267, -1826, -1738, -1820, -1006, -1732, -1156, -919, -711, -156, -1020, 882, -3111, 843, -3166, -175, -1304, 57, -1238, -357, -3194, -314), PackedVector2Array(-3111, 843, -3726, 1601, -3666, 3471, -3538, 4165, -2049, 4036, -1713, 3903, -1654, 4096, -1029, 5750, 2652, 4142, 2353, 3430, 2179, 3370, 2505, 3195, 2229, 2483, -583, 3687, -321, 4385, 1756, 3453, 1806, 3586, 1623, 3917, 1126, 4128, 626, 4114, -395, 4565, -969, 3567, 1209, 2575, 2762, 1907, 4167, 1226, 4141, -117, -711, -156, -1020, 882)])
+
 [node name="Outside" instance=ExtResource("1_2s4ok")]
 script = ExtResource("2_xqqjy")
 
@@ -65,7 +81,7 @@ position = Vector2(639, -914)
 
 [node name="Soil" type="Sprite2D" parent="Ground" index="0"]
 texture_repeat = 2
-position = Vector2(607.576, 942.713)
+position = Vector2(670.758, 988.717)
 scale = Vector2(1.05743, 1.01543)
 texture = ExtResource("2_qvsb0")
 region_enabled = true
@@ -107,7 +123,7 @@ position = Vector2(3567.56, 468.128)
 texture = ExtResource("10_cnio0")
 
 [node name="House" parent="Ground" index="8" instance=ExtResource("11_6u4a0")]
-position = Vector2(1661.75, 1973.4)
+position = Vector2(669.892, 3411.68)
 rotation = 2.75669
 
 [node name="SteamVent" parent="Ground" index="9" instance=ExtResource("12_oe17f")]
@@ -115,15 +131,15 @@ position = Vector2(-211.18, 444.721)
 scale = Vector2(0.865494, 0.807116)
 
 [node name="LightFanAnimation" parent="Ground" index="10" instance=ExtResource("14_uaeil")]
-position = Vector2(2378.38, 1899.95)
+position = Vector2(1626.26, 2528.69)
 autoplay = "default"
 
 [node name="Crate" parent="Ground" index="11" instance=ExtResource("15_x30qc")]
-position = Vector2(1744.83, 1822.47)
+position = Vector2(1173.61, 3129.19)
 rotation = -0.403171
 
 [node name="Toilet" parent="Ground" index="12" instance=ExtResource("16_uaeil")]
-position = Vector2(2317.79, 819.222)
+position = Vector2(1501.63, 2178.4)
 rotation = -0.382227
 
 [node name="Infestation" parent="." index="3"]
@@ -139,23 +155,66 @@ position = Vector2(120, 264)
 position = Vector2(-1358, 153)
 
 [node name="Scout" parent="Enemies" index="0" instance=ExtResource("19_gd7nx")]
-position = Vector2(1595, 2953)
+position = Vector2(343, 4317)
 rotation = 3.14159
 collision_layer = 2
 collision_mask = 11
 
 [node name="Bug" parent="Enemies" index="1" instance=ExtResource("20_4lnny")]
-position = Vector2(2497, 430)
+position = Vector2(2106, -51)
 
 [node name="Drone" parent="Enemies" index="2" instance=ExtResource("21_cnio0")]
-position = Vector2(-371, 560)
+position = Vector2(1387, 1903)
+
+[node name="Hunter" parent="Enemies" index="3" instance=ExtResource("22_oe17f")]
+position = Vector2(-1413, -748)
 
 [node name="Player" parent="." index="8"]
 z_index = 2
-position = Vector2(-323, 1343)
+position = Vector2(-3000, 550)
 
 [node name="Lights" parent="." index="9"]
 position = Vector2(-773, 222)
+
+[node name="Path2D" type="Path2D" parent="." index="11"]
+curve = SubResource("Curve2D_cnio0")
+
+[node name="Car" parent="Path2D" index="0" instance=ExtResource("22_6u4a0")]
+position = Vector2(2899, 1475)
+rotation = 0.128817
+
+[node name="LevelBarriers" type="Node2D" parent="." index="12"]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="LevelBarriers" index="0"]
+position = Vector2(-194, 91)
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelBarriers/StaticBody2D" index="0"]
+position = Vector2(1035.5, 6839.25)
+shape = SubResource("RectangleShape2D_lbwx5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LevelBarriers/StaticBody2D" index="1"]
+position = Vector2(1859, -4668)
+shape = SubResource("RectangleShape2D_lbwx5")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="LevelBarriers" index="1"]
+position = Vector2(-194, 91)
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LevelBarriers/StaticBody2D2" index="0"]
+position = Vector2(-4365, 471)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_lbwx5")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="LevelBarriers/StaticBody2D2" index="1"]
+position = Vector2(7416, 1062)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_lbwx5")
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="." index="13"]
+position = Vector2(-27, 10)
+navigation_polygon = SubResource("NavigationPolygon_ddemh")
+metadata/_edit_lock_ = true
 
 [connection signal="player_entered_gate" from="Gate" to="." method="_on_gate_player_entered_gate"]
 [connection signal="player_entered" from="Ground/House" to="." method="_on_house_player_entered"]
